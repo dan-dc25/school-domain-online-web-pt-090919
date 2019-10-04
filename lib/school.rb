@@ -1,30 +1,30 @@
-# code here!
 class School
-
-  roster = {}
+  attr_accessor :name, :roster
   
   def initialize(name)
     @name = name
-  end
+    @roster = {}
+  end 
   
-  def add_student(student, grade)
-    roster[grade] || = []
-    roster[grade] << student
-end
-
- def grade(level)
+  def add_student(student, level)
+    roster[level] ||= []
+    roster[level] << student
+  end 
+  
+  def grade(level)
     roster.detect do |x, y| 
       if x == level
         return y 
       end 
     end 
   end 
-
-  def sort 
-    nu_hash = {}
-    roster.each do |x, y| 
-      nu_hash[x] = y.sort 
-    end 
-    nu_hash
+  
+def sort 
+  nu_hash = {}
+  roster.each do |x, y| 
+    nu_hash[x] = y.sort 
   end 
-end
+  nu_hash
+end 
+  
+end 
